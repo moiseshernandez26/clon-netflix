@@ -1,0 +1,73 @@
+.general-container {
+  border: 0.1em solid black;
+  height: 20em;
+  width: 20em;
+  border-radius: 0.3em;
+  background-color: #303030;
+  box-shadow: 0.1em 0.1em 0.2em #303030;
+  margin: 10%; /* Solo para pruebas */
+}
+
+.image-container {
+  align-content: center;
+  height: 12em;
+  width: 20em;
+}
+
+.description-container {
+  width: 100%;
+  height: 2em;
+  margin-left: 0.3em;
+}
+
+.clasification-container {
+  width: 100%;
+  height: 100%;
+  margin-left: 0.3em;
+}
+
+.text {
+  color: white;
+  font-weight: bold;
+  font-size: smaller;
+  margin-right: 1em;
+}
+
+.text-other {
+  color: white;
+  font-weight: bold;
+  font-size: smaller;
+  border: 0.1em solid white;
+}
+
+.text-status {
+  color: green;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.buttons-container {
+  align-content: center;
+  column-count: 2;
+  column-gap: 15em; /* separacion entre columnas */
+  margin-top: 0.5em;
+  height: 2.5em;
+  width: 100%;
+  margin-left: 0.3em;
+}
+
+.buttons-subContainer {
+  column-count: 4;
+  margin-left: 0.1em;
+  column-gap: 2em;
+  height: 2.5em;
+  width: 3em;
+}
+
+.buttons {
+  border: 0.1em solid white;
+  border-radius: 1.5em;
+  align-content: center;
+  width: 1.5em;
+  height: 1.5em;
+}
