@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
 import './App.css'
+import 'theme/variables.css'
 const Home = lazy(() => import('./Views/Home'))
 
 function App() {

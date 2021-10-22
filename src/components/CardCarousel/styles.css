@@ -1,3 +1,6 @@
+:root {
+  --border-radius: 0.3em;
+}
 .general-container {
   height: 19em;
   width: 20em;
@@ -6,8 +9,8 @@
 }
 
 .general-container:hover {
-  border-radius: 0.3em;
-  background-color: #303030;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
   transform: scale(1.1);
   transition: all 0.3s;
 }
@@ -29,7 +32,7 @@
   align-content: center;
   height: 12em;
   width: 20em;
-  border-radius: 0.3em;
+  border-radius: var(--border-radius);
 }
 
 .description-container {
@@ -44,7 +47,7 @@
   margin-left: 0.3em;
 }
 
-.text {
+.text-card-carousel {
   color: white;
   font-weight: bold;
   font-size: smaller;
@@ -52,11 +55,7 @@
 }
 
 .text-other {
-  color: white;
-  font-weight: bold;
-  font-size: smaller;
   border: 0.1em solid white;
-  margin-right: 1em;
 }
 
 .text-status {

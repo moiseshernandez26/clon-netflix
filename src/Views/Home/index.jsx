@@ -1,9 +1,9 @@
 import './styles.css'
-import CardCarousel from '../../ViewComponents/Home/CardCarousel'
+import CardCarousel from 'components/CardCarousel'
 const Home = () => {
   return (
     <div>
-      <CardCarousel></CardCarousel>
+      <CardCarousel />
     </div>
   )
 }

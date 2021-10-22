@@ -3,9 +3,9 @@ const CardCourel = () => {
   // const [id, setId] = useState(1)
   // const [name, setname] = useState('La vida de Armando')
   const quality = 'HD'
-  const season = '1 temporada'
   const other = 'TV-MA'
   const clasification = 'Inspiradora . Accion'
+  const season = '1 Temporada'
 
   return (
     <div className="general-container">
@@ -58,16 +58,16 @@ const CardCourel = () => {
         </div>
         <div className="description-container">
           <span className="text-status">Nuevo</span>
-          <span className="text-other"> {other} </span>
-          <span className="text">{season}</span>
-          <span className="text-other">{quality}</span>
+          <span className="text-card-carousel text-other"> {other} </span>
+          <span className="text-card-carousel">{season}</span>
+          <span className="text-card-carousel text-other">{quality}</span>
         </div>
         <div className="clasification-container">
-          <span className="text">{clasification}</span>
+          <span className="text-card-carousel">{clasification}</span>
         </div>
       </div>
     </div>
   )
 }
-// test
+
 export default CardCourel
