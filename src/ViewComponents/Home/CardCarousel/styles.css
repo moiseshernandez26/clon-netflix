@@ -1,17 +1,38 @@
 .general-container {
-  border: 0.1em solid black;
-  height: 20em;
+  height: 19em;
   width: 20em;
-  border-radius: 0.3em;
-  background-color: #303030;
-  box-shadow: 0.1em 0.1em 0.2em #303030;
   margin: 10%; /* Solo para pruebas */
+  transition: all 0.3s;
+}
+
+.general-container:hover {
+  border: 0.1em solid black;
+  border-radius: 0.3em;
+  box-shadow: 0.1em 0.1em 0.2em #303030;
+  background-color: #303030;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.general-container:hover .subgeneral-container {
+  display: inline;
+}
+
+.general-container:hover .image-container {
+  border-bottom-left-radius: 0em;
+  border-bottom-right-radius: 0em;
+}
+
+.subgeneral-container {
+  display: none;
 }
 
 .image-container {
   align-content: center;
   height: 12em;
   width: 20em;
+  border-radius: 0.3em;
+  box-shadow: 0.1em 0.1em 0.2em 0.1em #303030;
 }
 
 .description-container {
@@ -38,6 +59,7 @@
   font-weight: bold;
   font-size: smaller;
   border: 0.1em solid white;
+  margin-right: 1em;
 }
 
 .text-status {
@@ -70,4 +92,14 @@
   align-content: center;
   width: 1.5em;
   height: 1.5em;
+}
+
+.buttons-play {
+  border: 0.1em solid white;
+  border-radius: 1.5em;
+  align-content: center;
+  background-color: white;
+  width: 1.5em;
+  height: 1.5em;
+  fill-rule: 'nonzero';
 }

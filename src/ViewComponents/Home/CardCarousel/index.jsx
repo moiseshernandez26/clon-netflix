@@ -16,43 +16,55 @@ const CardCourel = () => {
           alt="Movie Img"
         ></img>
       </div>
-      <div className="buttons-container">
-        <div className="buttons-subContainer">
-          <img
-            src="/assets/img/CardCarousel/Play.svg"
-            alt="PlayButton"
-            className="buttons"
-          ></img>
-          <img
-            src="/assets/img/CardCarousel/Plus.svg"
-            alt="PlusButton"
-            className="buttons"
-          ></img>
-          <img
-            src="/assets/img/CardCarousel/Like.svg"
-            alt="LikeButton"
-            className="buttons"
-          ></img>
-          <img
-            src="/assets/img/CardCarousel/Unlike.svg"
-            alt="UnlikeButton"
-            className="buttons"
-          ></img>
+      <div className="subgeneral-container">
+        <div className="buttons-container">
+          <div className="buttons-subContainer">
+            <a href="" title="Play">
+              <img
+                src="/assets/img/CardCarousel/Play.svg"
+                alt="PlayButton"
+                className="buttons-play"
+              ></img>
+            </a>
+            <a href="" title="Agregar">
+              <img
+                src="/assets/img/CardCarousel/Plus.svg"
+                alt="PlusButton"
+                className="buttons"
+              ></img>
+            </a>
+            <a href="" title="Me gusta">
+              <img
+                src="/assets/img/CardCarousel/Like.svg"
+                alt="LikeButton"
+                className="buttons"
+              ></img>
+            </a>
+            <a href="" title="No me gusta">
+              <img
+                src="/assets/img/CardCarousel/Unlike.svg"
+                alt="UnlikeButton"
+                className="buttons"
+              ></img>
+            </a>
+          </div>
+          <a href="" title="Detalles">
+            <img
+              src="/assets/img/CardCarousel/Down.svg"
+              alt="DownButton"
+              className="buttons"
+            ></img>
+          </a>
         </div>
-        <img
-          src="/assets/img/CardCarousel/Down.svg"
-          alt="DownButton"
-          className="buttons"
-        ></img>
-      </div>
-      <div className="description-container">
-        <span className="text-status">Nuevo</span>
-        <span className="text-other">{other}</span>
-        <span className="text">{season}</span>
-        <span className="text-other">{quality}</span>
-      </div>
-      <div className="clasification-container">
-        <span className="text">{clasification}</span>
+        <div className="description-container">
+          <span className="text-status">Nuevo</span>
+          <span className="text-other"> {other} </span>
+          <span className="text">{season}</span>
+          <span className="text-other">{quality}</span>
+        </div>
+        <div className="clasification-container">
+          <span className="text">{clasification}</span>
+        </div>
       </div>
     </div>
   )
