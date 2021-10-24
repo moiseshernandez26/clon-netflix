@@ -1,20 +1,19 @@
-import './styles.css'
-const CardCourel = () => {
-  // const [id, setId] = useState(1)
-  // const [name, setname] = useState('La vida de Armando')
-  const quality = 'HD'
-  const other = 'TV-MA'
-  const clasification = 'Inspiradora . Accion'
-  const season = '1 Temporada'
+import PropTypes from 'prop-types'
 
+import './styles.css'
+const CardCourel = ({
+  id,
+  name,
+  quality,
+  other,
+  clasification,
+  season,
+  urlimage,
+}) => {
   return (
-    <div className="general-container">
-      <div>
-        <img
-          className="image-container"
-          src="/assets/img/CardCarousel/PeliculaDeArmando.jpeg"
-          alt="Movie Img"
-        ></img>
+    <div id={id} className="general-container">
+      <div id={name}>
+        <img className="image-container" src={urlimage} alt="Movie Img"></img>
       </div>
       <div className="subgeneral-container">
         <div className="buttons-container">
@@ -68,6 +67,16 @@ const CardCourel = () => {
       </div>
     </div>
   )
+}
+
+CardCourel.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  quality: PropTypes.string.isRequired,
+  other: PropTypes.string.isRequired,
+  clasification: PropTypes.string.isRequired,
+  season: PropTypes.string.isRequired,
+  urlimage: PropTypes.string.isRequired,
 }
 
 export default CardCourel
