@@ -11,9 +11,13 @@ const CardCourel = ({
   urlimage,
 }) => {
   return (
-    <div id={id} className="general-container">
+    <div id={id} className="size-container general-container">
       <div id={name}>
-        <img className="image-container" src={urlimage} alt="Movie Img"></img>
+        <img
+          className="size-container image-container"
+          src={urlimage}
+          alt="Movie Img"
+        ></img>
       </div>
       <div className="subgeneral-container">
         <div className="buttons-container">
