@@ -1,0 +1,22 @@
+.browser-container {
+  background-color: black;
+  align-content: center;
+  border: 0.1em solid white;
+  position: relative;
+  width: 8em;
+  height: 2em;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: transparent;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  width: 6em;
+  margin-left: 0.5em;
+  align-content: center;
+}

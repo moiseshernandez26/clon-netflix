@@ -1,0 +1,11 @@
+.text-container {
+  background-color: transparent;
+}
+
+.text-b {
+  color: white;
+}
+
+.text-b:hover {
+  font-weight: bold;
+}

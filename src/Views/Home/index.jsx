@@ -2,6 +2,8 @@ import { useRef } from 'react'
 
 import CardCourel from 'components/CardCarousel'
 import BellIcon from 'Utils/Icons/BellIcon'
+import TextNavBar from 'components/TextNavBar'
+import NavBrowser from 'components/NavBrowser'
 
 import './styles.css'
 
@@ -128,6 +130,8 @@ const Home = () => {
       </div>
       <div className="container-carousel"></div>
       <h1>Hola master</h1>
+      <TextNavBar text="Texto"></TextNavBar>
+      <NavBrowser></NavBrowser>
 
       <BellIcon />
     </section>
