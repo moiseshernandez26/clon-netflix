@@ -1,0 +1,18 @@
+.generalprofile-container {
+  background-color: transparent;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  display: flex;
+}
+
+.imageprofile-container {
+  width: 2em;
+  height: 2em;
+  border-radius: 0.3em;
+}
+
+.dropdown-profile-container {
+  width: 1em;
+  height: 1em;
+}

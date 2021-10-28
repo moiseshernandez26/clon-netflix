@@ -1,0 +1,55 @@
+.navigation-bar-container {
+  width: 100%;
+  height: 3em;
+  background-color: black;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+li {
+  display: inline;
+}
+
+.logo-navbar {
+  width: 8em;
+  height: 3em;
+  margin-right: 3em;
+}
+
+.text-li-navbar {
+  height: 3em;
+  width: auto;
+  margin-right: 1em;
+  align-items: center;
+  display: flex;
+}
+
+.navbrowser-container {
+  margin-right: 1em;
+  height: auto;
+  width: 8em;
+}
+
+.nav-bell-container {
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
+}
+
+ul {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.contaiter-texts-op {
+  width: 50em;
+  height: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
