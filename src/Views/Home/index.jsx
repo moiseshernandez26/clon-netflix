@@ -1,72 +1,52 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import CardCourel from 'components/CardCarousel'
 
 import './styles.css'
+import { getPopularMovies, getGenreList } from 'services/movieService'
 
 const Home = () => {
-  const movies = [
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    requestData()
+  }, [])
+
+  const requestData = async () => {
+    const genereList = await getGenreList()
+    let moviesList = await getPopularMovies()
+    console.log(moviesList)
+    console.log(genereList)
+    moviesList = moviesList.map((movie) => {
+      movie.genre_ids = movie.genre_ids.map((idGenere) => {
+        const aux = genereList.find((genere) => genere.id === idGenere)
+        return aux.name
+      })
+      movie.clasification = movie.genre_ids.join(' . ')
+      movie.quality = 'HD'
+      movie.other = 'TV-MA'
+      movie.name = movie.title
+      movie.season = '1 temporada'
+      movie.urlimage =
+        'https://image.tmdb.org/t/p/original' + movie.backdrop_path
+      return movie
+    })
+    setMovies(moviesList)
+  }
+
+  /* const moviesFistVersion = [
     {
       id: 1,
       name: 'La pelicula de armando',
       quality: 'HD',
       other: 'TV-MA',
       clasification: 'Accion . Aventura',
-      season: '1 temporada',
+      season: '3 temporada',
       urlimage:
         'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
     },
-    {
-      id: 1,
-      name: 'La pelicula de armando',
-      quality: 'HD',
-      other: 'TV-MA',
-      clasification: 'Accion . Aventura',
-      season: '1 temporada',
-      urlimage:
-        'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
-    },
-    {
-      id: 1,
-      name: 'La pelicula de armando',
-      quality: 'HD',
-      other: 'TV-MA',
-      clasification: 'Accion . Aventura',
-      season: '1 temporada',
-      urlimage:
-        'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
-    },
-    {
-      id: 1,
-      name: 'La pelicula de armando',
-      quality: 'HD',
-      other: 'TV-MA',
-      clasification: 'Accion . Aventura',
-      season: '1 temporada',
-      urlimage:
-        'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
-    },
-    {
-      id: 1,
-      name: 'La pelicula de armando',
-      quality: 'HD',
-      other: 'TV-MA',
-      clasification: 'Accion . Aventura',
-      season: '1 temporada',
-      urlimage:
-        'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
-    },
-    {
-      id: 1,
-      name: 'La pelicula de armando',
-      quality: 'HD',
-      other: 'TV-MA',
-      clasification: 'Accion . Aventura',
-      season: '1 temporada',
-      urlimage:
-        'https://elcomercio.pe/resizer/l43Idy2ju4uIkzTHHbpLmZYpLwg=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TRY2CQHRVFDJLIAGVTQHDQBJRM.jpg',
-    },
-  ]
+  ] */
+
   const refCarousel = useRef(null)
 
   const clickPrev = () => {
@@ -126,7 +106,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container-carousel"></div>
-      <h1>Hola master</h1>
+      <h1>Hola a todos</h1>
       <div style={{ height: '1000em' }}></div>
     </section>
   )
