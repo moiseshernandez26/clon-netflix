@@ -107,7 +107,10 @@ const Home = () => {
       </div>
       <div className="container-carousel"></div>
       <h1>Hola a todos</h1>
-      <div style={{ height: '1000em' }}></div>
+      <div className="container-info">
+        <div className="square"></div>
+      </div>
+      <div className="container-info2"></div>
     </section>
   )
 }

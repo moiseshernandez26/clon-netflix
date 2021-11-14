@@ -1,3 +1,4 @@
+/* CSS DESIGN DESKTOP */
 .wrapper_home {
   width: 100%;
   z-index: 0;
@@ -92,5 +93,24 @@
   .peliculas-recomendadas .flecha-izquierda,
   .peliculas-recomendadas .flecha-derecha {
     display: none;
+  }
+}
+
+.container-info {
+  padding-bottom: 20em;
+  background-color: #000;
+}
+
+.square {
+  width: 50em;
+  height: 20em;
+  background-color: #a2a;
+}
+
+/* CSS DESIGN MOBIEL */
+@media only screen and (max-width: 768px) {
+  .square {
+    width: 100%;
+    background-color: red;
   }
 }
